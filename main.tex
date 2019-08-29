@@ -6,6 +6,7 @@
 \usepackage{tikz} %--for border in title page
 \usetikzlibrary{calc} %-- access to tikslibrary commands
 \usepackage{hyperref}
+\usepackage{xcolor}
 
 %--Parameters
 \title{Elaboration Exercise I}
@@ -13,12 +14,18 @@
 \date{August 2019}
 \fancyhfoffset[]{}
 \fancy
+\definecolor{collink}{RGB}{45, 95, 140}
+
+\hypersetup{
+colorlinks,
+linkcolor=collink,
+linktoc=all}
 
 %--Page Setup
 \pagestyle{fancy}
 \fancyhf{}
 
-\rhead{Scoping Exercise II}
+\rhead{Elaboration Exercise I}
 \lhead{Digital Humanities}
 
 \fancyfoot[RE,RO]{Aaron Hammond | 43691455}
@@ -61,9 +68,28 @@
 %--
 
 \section{Transcribe audio into plain text}
-\section{Convert articles into rich text}
+There are some promising software available for the transcription of audio files such as:
+\begin{itemize}
+    \item \hyperlink{https://otranscribe.com/}{oTranscribe}
+    \item \hyperlink{https://alveo.github.io/alveo-transcriber/welcome}{Alveo Transcriber Tool}
+    \item \hyperlink{https://www.theftwtranscriber.com/}{The FTW Transcriber}
+\end{itemize}
+According to reviews and feedback, these three options provide adequate transcribing features. Unfortunately oTranscribe and Alveo are browser-based and require the uploading of files for transcription. This could cause issues with privacy and security of my participators. FTW Transcriber appears to be the best option as it's downloadable and runs entirely locally on my PC.
+\section{Convert articles into simple text}
+The best pieces of software found for this step are:
+\begin{itemize}
+    \item \hyperlink{https://www.zamzar.com/}{Zamzar}
+    \item \hyperlink{https://unipdf.com/#howto}{UniPDF}
+\end{itemize}
+Zamzar is an online file converter that could potentially fulfill my conversion needs. Howver i would first need to check the privacy policy of Macquarie Library to ensure that the conversion is not in breach of any agreement. The second option of UniPDF is locally stored software which appears highly rated and can convert files into rtf format. 
+
 \section{Create plain text files from field notes}
+As i write my fieldnotes into a program called Joplin, i can export my notes as PDF files which i can then use in one of the options above to convert them to RTF.\\
+\linebreak
+Alternatively i could copy the contents into wordpad and then save it as an RTF file.
+
 \section{Add headers to all library files}
+
 \section{Analyze files and produce report}
 \
 
