@@ -1,0 +1,70 @@
+%--Packages
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{titling}
+\usepackage{fancyhdr} %--for fancy header/ footers
+\usepackage{tikz} %--for border in title page
+\usetikzlibrary{calc} %-- access to tikslibrary commands
+\usepackage{hyperref}
+
+%--Parameters
+\title{Elaboration Exercise I}
+\author{Aaron Hammond\\43691455}
+\date{August 2019}
+\fancyhfoffset[]{}
+\fancy
+
+%--Page Setup
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{Scoping Exercise II}
+\lhead{Digital Humanities}
+
+\fancyfoot[RE,RO]{Aaron Hammond | 43691455}
+\fancyfoot[LE,LO]{Page: \thepage}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+%--Commands
+
+\newcommand\HRule{\rule{\textwidth}{1pt}} %-- horizontal lines for formatting
+
+%--
+\begin{document}
+
+%--Title page
+
+\begin{titlepage}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \draw[line width = 4pt] ($(current page.north west) + (1in,-1in)$) rectangle ($(current page.south east) + (-1in,1in)$);
+\end{tikzpicture}
+
+\begin{center}
+\HRule\\[0.4cm]
+\huge{Elaboration Document I}\\[0.5cm]
+\huge{Aaron Hammond}\\
+\large{\today}\\[0.4cm]
+
+\HRule \\[1cm]
+
+
+\noindent This document is to elaborate on my proof of concept's scoping document and begin to think about the practical ways of achieving each  of the following steps:
+\end{center}
+
+\def\contentsname{\empty} %--Remove contents header from toc
+\tableofcontents
+
+\end{titlepage}
+
+%--
+
+\section{Transcribe audio into plain text}
+\section{Convert articles into rich text}
+\section{Create plain text files from field notes}
+\section{Add headers to all library files}
+\section{Analyze files and produce report}
+\
+
+\end{document}
