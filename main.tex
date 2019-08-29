@@ -81,16 +81,40 @@ The best pieces of software found for this step are:
     \item \hyperlink{https://www.zamzar.com/}{Zamzar}
     \item \hyperlink{https://unipdf.com/#howto}{UniPDF}
 \end{itemize}
-Zamzar is an online file converter that could potentially fulfill my conversion needs. Howver i would first need to check the privacy policy of Macquarie Library to ensure that the conversion is not in breach of any agreement. The second option of UniPDF is locally stored software which appears highly rated and can convert files into rtf format. 
+Zamzar is an online file converter that could potentially fulfill my conversion needs. Howver I would first need to check the privacy policy of Macquarie Library to ensure that the conversion is not in breach of any agreement. The second option of UniPDF is locally stored software which appears highly rated and can convert files into rtf format. 
 
 \section{Create plain text files from field notes}
-As i write my fieldnotes into a program called Joplin, i can export my notes as PDF files which i can then use in one of the options above to convert them to RTF.\\
+As I write my fieldnotes into a program called Joplin, I can export my notes as PDF files which I can then use in one of the options above to convert them to RTF.\\
 \linebreak
-Alternatively i could copy the contents into wordpad and then save it as an RTF file.
+Alternatively I could copy the contents into wordpad and then save it as an RTF file.
 
-\section{Add headers to all library files}
+\section{Folder and file naming structure}
+In order to maintain the division of information types there will be three sibling folders named interviews, articles and fieldnotes. These three folders will sit below a parent folder named raw\\
+\linebreak
+Create a batch file in the raw folder that will rename each file in the three sub folders with I\_ or A\_ or F\_\\
+Batch file would read something like\\
 
-\section{Analyze files and produce report}
+\begin{verbatim}
+    cd interviews
+    Get-ChildItem -Exclude "I_*" | rename-item -NewName { "I_" + $_.Name }}
+    cd ..
+    cd articles
+    Get-ChildItem -Exclude "A_*" | rename-item -NewName { "A_" + $_.Name }}
+    cd ..
+    cd fieldnotes
+    Get-ChildItem -Exclude "F_*" | rename-item -NewName { "F_" + $_.Name }}
+\end{verbatim}
+
+\section{Analyze text files}
+Some of the promising options for text analysis are as follows:
+\begin{itemize}
+    \item \hyperlink{https://www.g2.com/categories/text-analysis}{G2}
+    \item \hyperlink{https://www.laurenceanthony.net/software/antconc/}{AntConc}
+    \item \hyperlink{Voyant-tools.org}{Voyant Tools}
+\end{itemize}
+
+\noindent 
+Each of these options has it's own pros and cons. G2 is private software with a free version of the software, however this software sports the best features with the ability to create graphics. AntConc runs locally and is open source and supports multiple files simultaneously. Voyant Tools is a browser based application which requires the upload of data for computation. AntConc looks like the best option with potentially the use of G2 if graphic features are not hidden behind a paywall.
 \
 
 \end{document}
