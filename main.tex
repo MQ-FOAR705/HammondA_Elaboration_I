@@ -7,6 +7,7 @@
 \usetikzlibrary{calc} %-- access to tikslibrary commands
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{verbatimbox}
 
 %--Parameters
 \title{Elaboration Exercise I}
@@ -94,6 +95,7 @@ In order to maintain the division of information types there will be three sibli
 Create a batch file in the raw folder that will rename each file in the three sub folders with I\_ or A\_ or F\_\\
 Batch file would read something like\\
 
+\small{
 \begin{verbatim}
     cd interviews
     Get-ChildItem -Exclude "I_*" | rename-item -NewName { "I_" + $_.Name }}
@@ -104,7 +106,7 @@ Batch file would read something like\\
     cd fieldnotes
     Get-ChildItem -Exclude "F_*" | rename-item -NewName { "F_" + $_.Name }}
 \end{verbatim}
-
+}
 \section{Analyze text files}
 Some of the promising options for text analysis are as follows:
 \begin{itemize}
